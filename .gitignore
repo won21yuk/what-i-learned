@@ -1,0 +1,12 @@
+# Ignore GCP Service acount key
+terraform-practice-369907-098e7b100728.json
+
+# Ignore tfstate file
+*.tfstate
+
+# Ignore terraform lock
+*.lock.hcl
+
+# Ignore .terraform directories
+.terraform/
+
