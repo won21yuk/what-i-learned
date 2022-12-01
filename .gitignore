@@ -2,7 +2,9 @@
 terraform-practice-369907-098e7b100728.json
 
 # Ignore tfstate file
+# if tfstate's backup file created in same directory, it should be listed in .gitignore file.
 *.tfstate
+*.tfstate.backup
 
 # Ignore terraform lock
 *.lock.hcl
