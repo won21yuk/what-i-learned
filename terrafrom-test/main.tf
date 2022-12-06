@@ -11,12 +11,12 @@ terraform {
 
 provider "google" {
   # GCP에서 받은 서비스 계정키 파일(*.json)의 이름을 입력
-  credentials = file("C:/practice/learn-terraform-gcp/terraform-practice-369907-098e7b100728.json")
+  credentials = file(var.credentials_file)
 
   # 자신의 프로젝트 아이디 입력
-  project = "terraform-practice-369907"
-  region  = "asia-northeast3"
-  zone    = "asia-northeast3-c"
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 # VPC 생성
