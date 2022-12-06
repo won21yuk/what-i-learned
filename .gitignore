@@ -12,3 +12,5 @@ terraform-practice-369907-098e7b100728.json
 # Ignore .terraform directories
 .terraform/
 
+# Ignore terrform.tvars or auto.tfvars
+*.tfvars
