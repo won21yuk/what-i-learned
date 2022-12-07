@@ -1,0 +1,10 @@
+FROM ubuntu:20.04
+RUN apt-get update && apt-get install -y python3
+WORKDIR /var/www/html
+# host에 있는 index.html을 이미지를 만들 때 WORKDIR 경로에 복사
+COPY ["index.html", "."]
+CMD ["python3", "-u", "-m", "http.server"]
+
+# RUN VS CMD
+# RUN : build가 되는 시점에 실행되는 명령어 => RUN에서 실행한 결과는 이미지에 반영
+# CMD : 컨테이너가 실행될 때 실행되는 명령어 => CMD에서 실행한 결과는 컨테이너에 반영
