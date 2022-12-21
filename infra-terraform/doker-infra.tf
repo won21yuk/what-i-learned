@@ -112,6 +112,6 @@ resource "google_compute_firewall" "custom-internal" {
     ports = ["0-65535"]
   }
   direction = "INGRESS"
-  source_ranges = ["10.128.0.0/9"]
+  source_ranges = ["10.0.0.0/16"]
   target_tags = ["custom-internal"]
 }
