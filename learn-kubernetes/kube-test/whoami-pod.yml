@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: whoami
+  # pod의 라벨
+  labels:
+	# key : value
+    type: app
+# pod의 상세 내용
+spec:
+  containers:
+  - name: app
+    image: subicura/whoami:1

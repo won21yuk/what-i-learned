@@ -1,0 +1,3 @@
+# Ignore Elastic's Credentials file
+learn-app-search/credentials.txt
+
