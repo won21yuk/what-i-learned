@@ -1,0 +1,16 @@
+# Ignore GCP Keyfile
+docker-kubernetes-370811-d8d5dc6f8bd8.json
+
+# Ignore tfstate file
+# If tfstate's backup file id created in the same directory, it should be written in .gitignore file.
+*.tfstate
+*.tfstate.*
+
+# Ignore terraform lock
+*.lock.hcl
+
+# Ignore .terraform directories
+.terraform/
+
+# Ignore terrform.tvars or auto.tfvars
+*.tfvars
