@@ -4,12 +4,12 @@ import json
 # Create App-Search client
 client = Client(
     # You must add 'api/as/v1' to the end of the endpoint without including 'https://'
-    base_endpoint="enterprise-search-demo.ent.asia-northeast3.gcp.elastic-cloud.com/api/as/v1",
-    api_key="private-jbkzido3inm7cnnsqordng16",
+    base_endpoint="Put your Endpoint",
+    api_key="Put your API key",
     use_https=True
 )
 
-engine_name = "best-books-engine"
+engine_name = "Put your app search engine name"
 options = {"filters": {
     "date": {
         "from": "2023-01-16T00:00:00+00:00",
