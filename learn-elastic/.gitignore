@@ -1,3 +1,6 @@
 # Ignore Elastic's Credentials file
 learn-app-search/credentials.txt
 
+# Ignore json, csv file (GitHub's file size limit of 100.00 MB)
+best_books.json
+books_1.Best_Books_Ever.csv

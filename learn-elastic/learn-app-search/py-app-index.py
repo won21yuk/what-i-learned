@@ -37,7 +37,7 @@ engine_name = "Put your app search engine name"
 # Index Multiple Documents : read from games_data.json
 # You may face an error message '413 Client Error: Request Entity Too Large for url'
 # Then, Adjust the size of the count being added (In my case, it is possible up to 100)
-with open("games_data.json", "r") as f:
+with open("best_books.json", "r") as f:
     data = json.load(f)
 count = 0
 while count < len(data):
