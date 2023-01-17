@@ -1,6 +1,6 @@
 import pandas as pd
 
-# origin data set can download blow link:
+# The origin data set can be downloaded from the link below:
 # https://www.kaggle.com/datasets/thedevastator/comprehensive-overview-of-52478-goodreads-best-b
 
 df = pd.read_csv('books_1.Best_Books_Ever.csv', encoding='unicode_escape', low_memory=False)
