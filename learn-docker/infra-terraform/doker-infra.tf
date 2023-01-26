@@ -25,7 +25,7 @@ resource "google_compute_network" "vpc_network" {
 resource "google_compute_instance" "vm_instance" {
   name         = "docker-instance"
   machine_type = "e2-medium"
-  tags         = ["custom-ssh", "custom-port-range", "custom-http-server", "custom-https-server", "custom-internal"]
+  tags         = ["custom-ssh", "custom-port-range", "custom-http-server", "custom-https-server", "custom-internal", "custom-elk-port"]
 
   boot_disk {
     initialize_params {
@@ -65,6 +65,19 @@ resource "google_compute_firewall" "custom-general-port" {
   direction = "INGRESS"
   source_ranges = ["125.177.169.158/32"]
   target_tags = ["custom-port-range"]
+}
+
+resource "google_compute_firewall" "custom-elk-port" {
+  name    = "allow-elk-port"
+  network = google_compute_network.vpc_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["5601", "9200", "50000", "9600", "9300"]
+  }
+  direction = "INGRESS"
+  source_ranges = ["125.177.169.158/32"]
+  target_tags = ["custom-elk-port"]
 }
 
 resource "google_compute_firewall" "custom-http-server" {
